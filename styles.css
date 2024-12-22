@@ -49,7 +49,6 @@ body {
 #quote {
   font-size: 18px;
   margin: 20px 0;
-  font-style: italic;
 }
 
 .quote::before,
@@ -57,9 +56,11 @@ body {
   content: '"';
 }
 
+.author,
 #author {
   display: block;
   padding-top: 10px;
+  font-style: italic;
 }
 
 #toggle-favorite-btn {
