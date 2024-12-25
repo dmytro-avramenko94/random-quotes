@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Quotes</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="container">
@@ -14,9 +21,11 @@
       </p>
       <p id="quote-author">(author)</p>
       <button id="generate-btn" class="btn">Generate Quote</button>
-      <button id="toggle-favorite-btn" class="btn">Add to Favorites</button>
+      <i class="far fa-star star-icon" id="toggle-favorite-btn"></i>
+      <!-- <span id="toggle-favorite-btn" class="star-icon"></span> -->
+      <!-- <button id="toggle-favorite-btn" class="btn">Add to Favorites</button> -->
     </div>
     <div class="favorites-container" id="favorites-container"></div>
-    <script src="script.js" type="module"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

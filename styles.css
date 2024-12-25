@@ -67,6 +67,12 @@ body {
   display: none;
 }
 
+.star-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: yellow;
+}
+
 /* body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
