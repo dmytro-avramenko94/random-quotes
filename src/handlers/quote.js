@@ -9,10 +9,12 @@ function handleQuote(quotes, setCurrentQuote) {
 }
 
 function displayQuote(quote) {
+  const { id, text, author, isFavorite } = quote;
   const quoteElement = document.getElementById("quote");
+  const quoteTextElement = document.getElementById("quote-text");
   const quoteAuthorElement = document.getElementById("quote-author");
-  const { text, author, isFavorite } = quote;
-  quoteElement.innerHTML = text;
+  quoteElement.dataset.currentQuoteId = id;
+  quoteTextElement.innerHTML = text;
   quoteAuthorElement.innerHTML = author;
   handleFavorite(isFavorite);
 }

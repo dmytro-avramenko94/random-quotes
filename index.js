@@ -9,16 +9,16 @@ function setCurrentQuote(quote) {
 }
 
 const favoritesContainer = document.getElementById("favorites-container");
-const favoriteBtn = document.getElementById("favorite-btn");
-favoriteBtn.addEventListener("click", () =>
-  toggleFavorite(currentQuote, favoriteBtn, favoritesContainer)
+const quoteFavoriteBtn = document.getElementById("quote-favorite-btn");
+quoteFavoriteBtn.addEventListener("click", () =>
+  toggleFavorite(currentQuote, quoteFavoriteBtn, favoritesContainer)
 );
 
-hideFavoriteBtn(favoriteBtn);
+hideFavoriteBtn();
 
 const generateBtn = document.getElementById("generate-btn");
 generateBtn.addEventListener("click", () =>
   handleQuote(quotes, setCurrentQuote)
 );
 
-export { favoriteBtn };
+export { quoteFavoriteBtn };
