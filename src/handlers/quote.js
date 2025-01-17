@@ -2,8 +2,12 @@ import quotes from "../data/quotes.js";
 import { generateRandomInt } from "../utils/math.js";
 import { handleFavorite } from "./favorites.js";
 
-function handleQuote(quotes, setCurrentQuote) {
+function handleQuote(quotes, favoriteQuotes, setCurrentQuote) {
   const randomQuote = chooseRandomQuote(quotes);
+  // check if id of randomQUote is among ids of the favoreteQuotes
+  if (favoriteQuotes.find((quote) => quote.id === randomQuote.id)) {
+    randomQuote.isFavorite = true;
+  }
   setCurrentQuote(randomQuote);
   displayQuote(randomQuote);
 }
@@ -24,4 +28,8 @@ function chooseRandomQuote() {
   return quotes[randomIndex];
 }
 
-export { handleQuote };
+function findQuoteById(quotes, id) {
+  return quotes.find((quote) => quote.id === id);
+}
+
+export { handleQuote, displayQuote, findQuoteById };
